@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo - Modelo First</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: beige;
+        }
+
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: white;
+            box-shadow: black 0 0 10px;
+            padding: 1%;
+        }
+
+        .topo {
+            background-color: dodgerblue;
+            text-align: center;
+        }
+
+        .manu {
+            background-color: yellow;
+        }
+
+        .conteudo {
+            background-color: rgb(110, 170, 110);
+        }
+
+        .um {
+            background-color: rgba(110, 230, 110, 0.74);
+        }
+
+        .dois {
+            background-color: rgb(45, 172, 172);
+        }
+
+        .tres {
+            background-color: rgb(109, 158, 250);
+        }
+
+        .rodape {
+            background-color: deepskyblue;
+        }
+
+        h2,
+        p {
+            padding: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (min-width: 551px) {
+            .topo {
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+                align-items: center;
+            }
+
+            .manu {
+                width: 50%;
+                height: 30px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+            }
+
+            h1 {
+                margin-left: 20px;
+            }
+
+        }
+
+        .conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            /* Alternativa 1 */
+            gap: 10px;
+            /* justify-content: space-between; */
+        }
+
+        .um { width: 39%;}
+        .dois { width: 58%;}
+        /* .tres { margin: %;} */
+
+        @media screen and (min-width: 862px) {
+            .conteudo {flex-wrap: nowrap;}
+            .um, .dois, .tres { width: 33%;}    
+             html { font-size: 20px;}  
+            
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="topo">
+            <h1>Site</h1>
+            <nav class="manu">
+                <a href="">Link 1</a>
+                <a href="">Link 2</a>
+                <a href="">Link 3</a>
+            </nav>
+        </header>
+
+
+        <main class="conteudo">
+            <article class="um">
+                <h2>Um</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi sed dolore sapiente earum
+                    voluptatem harum eum. At dignissimos dolorem repudiandae maxime? Aut a commodi recusandae quam cum
+                    laborum temporibus molestias?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia quos similique eaque,
+                    corporis nulla! Voluptate necessitatibus molestias quasi iste temporibus amet quis accusantium
+                    beatae ducimus laudantium, dolorum, repellat sequi?</p>
+            </article>
+            <article class="dois">
+                <h2>Dois</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi sed dolore sapiente earum
+                    voluptatem harum eum. At dignissimos dolorem repudiandae maxime? Aut a commodi recusandae quam cum
+                    laborum temporibus molestias?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia quos similique eaque,
+                    corporis nulla! Voluptate necessitatibus molestias quasi iste temporibus amet quis accusantium
+                    beatae ducimus laudantium, dolorum, repellat sequi?</p>
+            </article>
+            <article class="tres">
+                <h2>Três</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi sed dolore sapiente earum
+                    voluptatem harum eum. At dignissimos dolorem repudiandae maxime? Aut a commodi recusandae quam cum
+                    laborum temporibus molestias?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia quos similique eaque,
+                    corporis nulla! Voluptate necessitatibus molestias quasi iste temporibus amet quis accusantium
+                    beatae ducimus laudantium, dolorum, repellat sequi?</p>
+            </article>
+        </main>
+
+
+
+        <footer class="rodape">
+            <h2>Design Responsivo</h2>
+            <p>Exemplo de layout com Media Queries</p>
+        </footer>
+    </div>
+</body>
+
+</html>
