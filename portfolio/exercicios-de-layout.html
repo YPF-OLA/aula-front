@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+
+        body {
+            font-family: Verdana;
+        }
+
+        .conteudo {
+            border: 8px solid orange;
+            /* height: auto; */
+            /* margin: auto; */
+            background-color: orange;
+            display: flex;
+            justify-content: space-evenly;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        section {
+            background-color: white;
+            width: 30%;
+            padding: 4px;
+            border-radius: 15px;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            border-bottom: 2px solid black; 
+            padding-bottom: 10px;
+        }
+
+        .manu {
+            width: 50%;
+            height: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: black;
+
+        }
+
+        .link {
+            color: white;
+
+        }
+
+        footer {
+            /* border: 8px solid white; */
+            /* width: 90%; */
+            background-color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        a { text-decoration: none;}
+
+        .titulo { 
+            text-decoration: underline;
+            position: relative;
+            
+        }
+
+        .titulo::before {
+            content: '';
+            position: absolute;
+            top: 0; /* Distância da linha em cima do texto */
+            left: 0;
+            right: 0;
+            height: 3px; /* Altura da linha em cima */
+            background: black; /* Cor da linha em cima */
+        }
+
+        article {  
+            width: 30%;
+          
+
+        }
+
+        @media screen and (max-width: 551px) {
+             header { background-color: orange;}
+            .body { background-color: orange;}
+            
+        }
+
+        @media screen and (max-width: 551px) {
+            section { 
+               width: 40%;
+               
+            }
+
+            
+            
+            .titulo { display: none;}
+            
+            .manu {  
+                width: 70%;
+                height: 30px;
+            }
+        }
+
+       
+
+
+        @media screen and (min-width: 551px) {
+            .container { background-color: orange;}
+            footer { border: 5px solid orange;}
+            hr { background-color: orange;}
+            .emoji { display: none;}
+        }
+
+      
+
+        
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="topo">
+            <h1 class="emoji">👻</h1><h1 class="titulo">👻Exercicios</h1>
+
+
+            <nav class="manu">
+                <a class="link" href="">Link 1</a>
+                <a class="link" href="">Link 2</a>
+                <a class="link" href="">Link 3</a>
+                <a class="link" href="">Link 4</a>
+            </nav>
+        </header>
+
+        
+        <div class="conteudo">
+            <section><img src="imagens.para.o.exercicios/cachorro.jpg" alt="">
+                <h2>Cachorro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quasi, odio cum ullam voluptate
+                    temporibus
+                    consectetur aliquam consequatur aperiam praesentium?</p>
+            </section>
+
+            <section><img src="imagens.para.o.exercicios/cidade.jpg" alt="">
+                <h2>Cidade</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat temporibus corrupti repudiandae id
+                    voluptate deserunt mollitia exercitationem at doloribus veniam?</p>
+            </section>
+
+            <section><img src="imagens.para.o.exercicios/escadas.jpg" alt="">
+                <h2>Escadas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi mollitia aperiam est. Est modi
+                    architecto,
+                    iusto commodi reprehenderit quia rerum.</p>
+            </section>
+
+            <section><img src="imagens.para.o.exercicios/trilhos.jpg" alt="">
+                <h2>Trilhos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eaque illo veritatis perferendis
+                    minima
+                    eius ab inventore a laudantium molestias?</p>
+            </section>
+
+            <section><img src="imagens.para.o.exercicios/montanhas.jpg" alt="">
+                <h2>Montanhas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quia cumque saepe molestiae! Sint
+                    labore eius quis rerum doloremque quam?</p>
+            </section>
+
+            <section><img src="imagens.para.o.exercicios/luzes.jpg" alt="">
+                <h2>Luzes</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odio quam quis magnam iste illo animi
+                    repellat, ullam minima quae.</p>
+            </section>
+        </div>
+
+        
+            <footer>
+                <article>
+                    <h3>Entre em contato conosco</h3>
+                   <p><a href=""> (11) 2135-0300</a></p>
+                   <p><a href=""> teste@teste.com</a></p> 
+                </article>
+                <article>
+                    <h3>Siga-nos!</h3>
+                   <p> <a href="">Facebook</a></p>
+                   <p> <a href="">Linkedin</a></p>
+                </article>
+            </footer>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
